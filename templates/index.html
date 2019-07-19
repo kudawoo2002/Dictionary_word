@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container text-center">
+  <h1>Dictionary</h1>
+  <h3>Search for a word</h3>
+  <form class="" action="" method="post">
+    Word: <input type="text" name="word" value="" placeholder="Enter a word">
+    <input type="submit" name="" value="Submit">
+  </form>
+    <div class="jumbotron">
+      {% if result %}
+      <h4>{{word}} meaning:</h4>
+      {% for x in result %}
+        {{x}}<br>
+      {% endfor %}
+        {% else %}
+        {{ message }}
+      {% endif %}
+    </div>
+</div>
+
+{% endblock %}
